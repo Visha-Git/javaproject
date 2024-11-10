@@ -10,10 +10,10 @@ pool:
   name: default
 
 steps:
--task: Maven@3
+-task: Maven@4
  inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'package'
+    goals: 'install'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
