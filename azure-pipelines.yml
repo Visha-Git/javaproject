@@ -7,11 +7,13 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  name: default
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+-task: Maven@3
+ inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'package'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
